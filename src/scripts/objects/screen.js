@@ -2,12 +2,16 @@ const screen = {
     userProfile: document.querySelector('.profile-data'),
     renderUser(user){
         this.userProfile.innerHTML = `<div class="info">
-                            <img src="${user.avatarUrl}" alt="Foto do perfil do usuário"/> 
-                            <div class="data"> 
-                                <h1>${user.name ?? 'Não possui nome cadastrado 😥'}</h1>
-                                <p>${user.bio ?? 'Não possui bio cadastrada 😥'}</p>
-                            </div>
-                        </div>`
+                                        <img src="${user.avatarUrl}" alt="Foto do perfil do usuário"/> 
+                                        <div class="data"> 
+                                            <h1>${user.name ?? 'Não possui nome cadastrado 😥'}</h1>
+                                            <p>${user.bio ?? 'Não possui bio cadastrada 😥'}</p>
+                                            <div class="follow">
+                                                <p>Followers: ${user.followers}</p>
+                                                <p>Following: ${user.following}</p>
+                                            </div>
+                                        </div>
+                                    </div>`
         
         // userProfile.innerHTML = userInfo;
 

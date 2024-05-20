@@ -108,17 +108,31 @@ main {
     border: 10px solid hotpink;
 }
 
-.container .profile-data .info h1 {
+.container .profile-data .info .data h1 {
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.container .profile-data .info p {
-    font-size: 15px;
+.container .profile-data .info .data p {
+    font-size: 18px;
     font-weight: 400;
     line-height: 23px;
 }
+
+.container .profile-data .info .data .follow{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+.container .profile-data .info .data .follow p {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #000;
+} 
+
 
 /* REPOSITORIES */
 
