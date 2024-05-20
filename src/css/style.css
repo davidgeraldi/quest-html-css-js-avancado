@@ -132,6 +132,7 @@ main {
     padding: 10px;
     font-size: 18px;
     border: 1px solid #000;
+    border-radius: 8px;
 } 
 
 .container .profile-data .events h2{
@@ -151,8 +152,6 @@ main {
     text-wrap: nowrap;
     font-weight: bold;
 }
-
-
 
 /* REPOSITORIES */
 
@@ -178,6 +177,7 @@ main {
     display: block;
     border-radius: 7px;
     transition: 0.3s ease-in-out;
+    font-size: 18px;
 }
 
 .container .profile-data .repositories ul li a:hover{
@@ -185,6 +185,18 @@ main {
     color: #fff;
 }
 
+.container .profile-data .repositories ul li .repository-infos{
+    gap: 6px;
+    font-size: 15px;
+    justify-content: center;
+}
+.container .profile-data .repositories ul li .repository-infos li{
+    background-color: #6A5ACD;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    
+}
 .container .profile-data.hide{
     display: none;
 }

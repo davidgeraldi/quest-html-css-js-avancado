@@ -7,17 +7,21 @@ const screen = {
                                             <h1>${user.name ?? 'Não possui nome cadastrado 😥'}</h1>
                                             <p>${user.bio ?? 'Não possui bio cadastrada 😥'}</p>
                                             <div class="follow">
-                                                <p>Followers: ${user.followers}</p>
-                                                <p>Following: ${user.following}</p>
+                                                <p>👥Seguidores: ${user.followers}</p>
+                                                <p>👥Seguindo: ${user.following}</p>
                                             </div>
                                         </div>
                                     </div>`
         
-        // userProfile.innerHTML = userInfo;
-
         let repositoriesItens = '';
         user.repositories.forEach(repo => {
-            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`;
+            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}<br><br><ul class="repository-infos">
+                                <li>🍴${repo.forks}</li>
+                                <li>⭐${repo.stargazers_count}</li>
+                                <li>👀${repo.watchers}</li>
+                                <li>👨‍💻${repo.language ?? ''}</li>
+                                </ul>
+                        </a></li>`;
         });
 
         if(user.repositories.length > 0){
@@ -31,7 +35,6 @@ const screen = {
         user.events.forEach(event => {
             if(event.type === "PushEvent"){
                 eventsItens += `<li><p class="repository">${event.repo.name} --> </p> <p class="message">${event.payload.commits[0].message}</p></li>`;
-                console.log(eventsItens);
             }else{
                 eventsItens += `<li><p class="repository">${event.repo.name} --></p> <p>Sem commits para mostrar</p></li>`;
             }
