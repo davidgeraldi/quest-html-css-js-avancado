@@ -10,11 +10,8 @@ document.getElementById('btn-search').addEventListener('click', () => {
     getUserData(userName);
 })
 
-//PARA FAZER COM QUE A TECLA ENTER DO COMPUTADOR TAMBÉM RESPONDA À PESQUISA
 document.getElementById('input-search').addEventListener('keyup', (e) => {
-    const userName = e.target.value;//pega o valor html que esta no input text
-    // const key = e.which || e.keyCode; // pega o código da chave(tecla)
-    // const isEnterKeyPressed = key === 13;//13 é o códgio da tecla enter do computador
+    const userName = e.target.value;
     if (e.key === "Enter") {
         if(validateEmptyInput(userName)) return;
         getUserData(userName);
@@ -24,7 +21,7 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
 function validateEmptyInput(userName){
     if(userName.length === 0){
         alert('Preencha o campo com o nome do usuário do GitHub');
-        return true;//tem que ter o return para o código não seguir normalmente
+        return true;
     }
 }
 
@@ -45,3 +42,4 @@ async function getUserData(userName) {
 
     screen.renderUser(user);
 }
+

@@ -136,7 +136,9 @@ main {
 } 
 
 .container .profile-data .events h2{
-    padding: 15px;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 30px;
 }
 .container .profile-data .events ul{
     display: flex;
@@ -147,6 +149,7 @@ main {
     display: flex;
     text-align: start;
     gap: 20px;
+    font-size: 17px;
 }
 .container .profile-data .events ul li .repository {
     text-wrap: nowrap;
@@ -158,6 +161,8 @@ main {
 .container .profile-data .repositories h2 {
     margin-bottom: 30px;
     text-align: center;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .container .profile-data .repositories ul {
@@ -195,7 +200,6 @@ main {
     color: #fff;
     padding: 4px;
     border-radius: 5px;
-    
 }
 .container .profile-data.hide{
     display: none;
