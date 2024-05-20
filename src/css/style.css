@@ -89,6 +89,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 40px;
+    width: 950px;
 }
 
 .container .profile-data .info {
@@ -133,6 +134,25 @@ main {
     border: 1px solid #000;
 } 
 
+.container .profile-data .events h2{
+    padding: 15px;
+}
+.container .profile-data .events ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .profile-data .events ul li{
+    display: flex;
+    text-align: start;
+    gap: 20px;
+}
+.container .profile-data .events ul li .repository {
+    text-wrap: nowrap;
+    font-weight: bold;
+}
+
+
 
 /* REPOSITORIES */
 
@@ -144,7 +164,11 @@ main {
 .container .profile-data .repositories ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    text-align: center;
+}
+
+.container .profile-data .repositories ul li{
+    text-wrap: nowrap;
 }
 
 .container .profile-data .repositories ul li a {
