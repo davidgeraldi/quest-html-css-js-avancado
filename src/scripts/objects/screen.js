@@ -11,7 +11,7 @@ const screen = {
                                                 <p>👥Seguindo: ${user.following}</p>
                                             </div>
                                         </div>
-                                    </div>`
+                                    </div>`;
         
         let repositoriesItens = '';
         user.repositories.forEach(repo => {

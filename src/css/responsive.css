@@ -15,23 +15,43 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .container header #input-search, .container header #btn-search {
         width: 100%;
     }
-}
-
-@media (max-width: 425px) {
-    main {
-        padding: 15% 0;
+    .container .profile-data{
+        width: 110%;
     }
-    
     .container .profile-data .info img {
         margin-bottom: 20px;
+        width: 100%;
+    }
+    .container .profile-data .info .data {
+        width: 100%;
     }
 
-    .container .profile-data .info img, .container .profile-data .info .data {
+    .container .profile-data .repositories{
         width: 100%;
-        padding: 0;
+        padding: 40px 0;
+    }
+
+    .container .profile-data .repositories ul{
+        justify-content: center;
+    }
+    .container .profile-data .repositories ul li{
+        max-width: 300px;
+    }
+    .container .profile-data .repositories ul li a{
+        text-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .container .profile-data .events ul li{
+        flex-direction: column;
+        width: 100%;
+        text-wrap: wrap;
+    }
+    .container .profile-data .events ul li .repository{
+        text-wrap: wrap;
     }
 }
